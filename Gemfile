@@ -3,6 +3,20 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.0"
 
+gem "table_print"
+gem "faker"
+gem 'devise'
+gem "pry"
+gem "rspec"
+gem "rubocop", require: false
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
