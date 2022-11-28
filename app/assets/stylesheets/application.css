@@ -27,7 +27,7 @@ html {
 
 body {
   background-image: url(/app/assets/images/pelage.jpg);
-  margin: 0;
+  margin: 20px;
 }
 
 article,
@@ -152,7 +152,7 @@ input,
 optgroup,
 select,
 textarea {
-  color: inherit;
+  
   font: inherit;
   margin: 0;
 }
@@ -1413,7 +1413,7 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 16px;
   line-height: 1.42857143;
-  color: #333333;
+  color: white;
   background-image: url("pelage.jpg");
 }
 
@@ -3854,7 +3854,7 @@ select[multiple].input-lg {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
   cursor: pointer;
-  background-image: none;
+  background-color: #40f54c;
   border: 1px solid transparent;
   padding: 8px 12px;
   font-size: 16px;
