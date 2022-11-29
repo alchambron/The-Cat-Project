@@ -1,0 +1,13 @@
+/* Importing your file */
+
+/*
+*= require navbar
+*= require show
+*/
+
+/* -------------- General ----------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+}

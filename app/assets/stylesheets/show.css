@@ -2,7 +2,7 @@
   background-color: grey;
 }
 
-.container {
+.contain {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -55,7 +55,7 @@ img {
   display: flex;
   justify-content: center;
   grid-area: button;
-  font size: 30px;
+  font-size: 30px;
   height: 50%;
   width: 100%;
 }
