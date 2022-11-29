@@ -1,6 +1,4 @@
-* {
-  background-color: grey;
-}
+
 
 .contain {
   display: grid;
@@ -15,7 +13,7 @@
     "photo description description"
     "photo . ."
     ". price."
-    "button button button";
+    "butt butt butt";
 }
 
 .titre {
@@ -51,11 +49,19 @@ img {
 
 }
 
-.button {
+.butt {
+ 
   display: flex;
   justify-content: center;
-  grid-area: button;
-  font-size: 30px;
-  height: 50%;
+  grid-area: butt;
+  font-size: 20px;
+  height: 20%;
   width: 100%;
+  
+
+}
+
+button{
+  background-color: green;
+  color: black;
 }
