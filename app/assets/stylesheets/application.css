@@ -1,7 +1,7 @@
 
 
 
-import url("https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap");
 
 /*!
  * bootswatch v3.4.1
@@ -17,16 +17,45 @@ import url("https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
+/* BANNER */ 
+
+
+/* FORM */
+
+.formulaire{
+  color:red;
+}
+.formulaire h1{
+  color:blue;
+}
+.form-signin{
+  max-width:330px;
+}
+.field{
+  text-align: center;
+  border-radius: 8px;
+  color:purple;
+  background-color: grey;
+}
+
+.login{
+  color: #FCD665;
+  text-align: center;
+}
+.login .actions{
+  color: blue;
+}
+
 
 
 html {
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif; ;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background-image: url(/app/assets/images/pelage.jpg);
+  background-color:red;
   margin: 0;
 }
 
@@ -1414,7 +1443,7 @@ body {
   font-size: 16px;
   line-height: 1.42857143;
   color: #333333;
-  background-image: url("pelage.jpg");
+  background:#feb775;
 }
 
 input,
@@ -6114,11 +6143,16 @@ a.badge:focus {
 }
 
 .jumbotron {
+
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #f7f7f7;
+    background: url('https://images.pexels.com/photos/1787414/pexels-photo-1787414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center;
+    background-size: cover;
+    padding-top: 30%;
+    padding-bottom: 30%;
+  }
 }
 
 .jumbotron h1,
@@ -6127,6 +6161,10 @@ a.badge:focus {
 }
 
 .jumbotron p {
+  background-color: purple;
+  text-
+  display: flex;
+  text-align: bottom;
   margin-bottom: 15px;
   font-size: 24px;
   font-weight: 200;

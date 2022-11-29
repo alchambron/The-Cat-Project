@@ -1,5 +1,13 @@
-<h2>Sign up</h2>
+<div class="jumbotron">
+ 
+  <p>Miaou miaou miaou miaou mmm encore miaou, miaou miaou miaou mmm encore miaou,
+  miaou miaou miaou mmm encore miaou,miaou miaou miaou mmm encore miaou, <br><br><br><br><br><br><br><br></p>
+</div>
 
+
+
+<div class="formulaire">
+<h1>Sign up</h1>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -15,7 +23,8 @@
 
     <div class="field">
     <%= f.label :birth_date %><br />
-    <%= f.text_field :birth_date, :value => (f.object.birth_date.strftime('%m/%d/%Y') if f.object.birth_date), :size => "20" %>  </div>
+    <%= f.text_field :birth_date, :value => (f.object.birth_date.strftime('%m/%d/%Y') if f.object.birth_date), :size => "20" %> 
+     </div>
 
   <div class="field">
     <%= f.label :email %><br />
@@ -38,6 +47,25 @@
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+  </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+<form class="form-signup">
+      <img class="mb-4" >
+      <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+      <label for="inputFirstname" class="sr-only">First name</label>
+      <input type="first_name" id="first_name" class="form-control" placeholder="First name" required autofocus>
+      <label for="inputLastname" class="sr-only">Last name</label>
+      <input type="last_name" id="inputLastname" class="form-control" placeholder="Last name" required autofocus>
+      <label for="inputEmail" class="sr-only">Email adress</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <label for="inputPassword" class="sr-only">Confirm password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="One more time please" required>
+      
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2022-2023</p>
+    </form>
