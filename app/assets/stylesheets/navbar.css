@@ -6,11 +6,12 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 0px 0px;
+  width: 100%;
   grid-auto-flow: row;
   grid-template-areas:
     ". . .";
   height: 10%;
-  background-color: rgba(163, 163, 163, 0.943);
+  background-color: rgb(233, 233, 233);
   margin: 0;
   padding: 0;
 }
