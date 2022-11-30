@@ -1,5 +1,5 @@
 
-
+/* --------------show css-------------- */
 .contain {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -34,7 +34,7 @@ grid-area: photo;
 
 }
 
-img {
+.photo img {
  
   max-height: 100%;
   max-width: 100%;
@@ -79,7 +79,7 @@ img {
 
 }
 
-button {
+.butt button {
   background-color: rgb(217, 21, 21);
   border: none;
   color: rgb(0, 0, 0);
@@ -98,11 +98,11 @@ button {
 
 
 
-button:hover {
+.butt button:hover {
   cursor: pointer
 }
 
-button {
+.butt button {
   background: forestgreen;
   outline: none;
   position: relative;
@@ -112,12 +112,12 @@ button {
 }
 
 /*button:before (attr data-hover)*/
-button:hover:before {
+.butt button:hover:before {
   opacity: 1;
   transform: translate(0, 0);
 }
 
-button:before {
+.butt button:before {
   content: attr(data-hover);
   position: absolute;
   top: 1.1em;
@@ -133,12 +133,12 @@ button:before {
 }
 
 /*button div (button text before hover)*/
-button:hover div {
+.butt button:hover div {
   opacity: 0;
   transform: translate(100%, 0)
 }
 
-button div {
+.butt button div {
   display: flex;
   
   text-transform: uppercase;

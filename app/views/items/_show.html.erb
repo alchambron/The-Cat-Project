@@ -1,11 +1,11 @@
-
+<%Item.each do |card|%>
 <div class="contain">
     <div class="titre">
-      <div class="title"><=@item.title></></div>
+      <div class="title"><%=card.title%></></div>
     </div>
 
         <div class="photo">
-          <img src ="https://www.mariefrance.fr/wp-content/uploads/sites/5/2022/10/a-3-750x394.jpg" class = "responsive">
+          <img src ="<% @cart_id>" class = "responsive">
         </div>
 
           <div class="description">Description : @items::fakker bien entendu il y aura ici des text qui iron avec la photo
@@ -17,6 +17,4 @@
         <div class="butt ">
         <button  data-hover="click me!"><div>Add to card</div></button>
 </div>
-
-
-
+<% end%>
