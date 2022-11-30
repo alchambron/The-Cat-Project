@@ -13,24 +13,25 @@
     ". . . valider valider";
 }
 
+
+.mon-panier {
+   grid-area: mon-panier;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items:flex-end;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
 .mon-panier h1{
   background-color: #B8AC98;
   border:solid 2px;
   border-radius: 10px;
   border: 4px double #cccccc;
 }
-.mon-panier {
-  max-width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items:flex-end;
-  grid-area: mon-panier;
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
-}
-
 .itemchoisi{
   display: flex;
   justify-content: flex-start;
@@ -38,8 +39,8 @@
 }
 
 .info-panier {
-  background-color: #B8AC98;
   grid-area: info-panier;
+  background-color: #B8AC98;
   display: flex;
   justify-content:space-evenly;
   align-items: center;
@@ -50,7 +51,7 @@
   border: 4px double #cccccc;
 
 }
-img{
+.info img{
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -59,25 +60,27 @@ img{
 }
 
 .recap{
-  background-color: #B8AC98;
   grid-area: recap;
-   border: solid 2px;
+  background-color: #B8AC98;
+  border: solid 2px;
    border-radius: 10px;
     border: 4px double #cccccc;
 }
 
 .recapitu{
+  grid-area: recapitu;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  grid-area: recap;
+ 
 
 }
 
-h2{
+.recapitu h2{
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  
 }
 
 .valider {
@@ -92,7 +95,7 @@ h2{
     
 }
 
-button{
+.valider button{
   display: flex;
     justify-content: center;
     align-items: center;
@@ -101,7 +104,7 @@ button{
         display: inline-block;
         background-color: rgb(28, 202, 28);
         border-radius: 50px;
-        /* border: 4px double #cccccc; */
+        border: 4px double #cccccc;
         color: #000000;
   
        
