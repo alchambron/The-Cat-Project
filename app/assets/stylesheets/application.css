@@ -3,6 +3,9 @@
 /*
 *= require navbar
 *= require show
+*= require list_items
+
+*= require footer
 */
 
 /* -------------- General ----------------- */
@@ -11,6 +14,8 @@ body {
   background-color: #808080;
   margin: 0;
   padding: 0;
+ 
 }
+
 
 /*--------------------

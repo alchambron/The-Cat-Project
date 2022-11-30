@@ -1,3 +1,5 @@
+/* ----------------show css ---------------- */
+
 
 /* --------------show css-------------- */
 .contain {
@@ -26,7 +28,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px ;
+  font-size: 40px;
+  
 }
 
 .photo {

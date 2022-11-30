@@ -1,0 +1,35 @@
+Table User {
+  id integer
+  first_name string
+  last_name string
+  birth_date datetime
+  email email
+  password password
+}
+
+Table Order {
+  id integer
+  cart_id integer
+  user_id integer
+}
+
+Table Item {
+  id integer
+  title string
+  description text
+  price decimal
+  image_url string
+}
+
+Table OrderRow {
+  item_id integer
+  order_id integer
+}
+
+
+Ref: "Order"."user_id" < "User"."id"
+
+Ref: "OrderRow"."item_id" < "Item"."id"
+
+Ref: "OrderRow"."order_id" < "Order"."id"
+
