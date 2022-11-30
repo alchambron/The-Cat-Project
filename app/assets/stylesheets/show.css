@@ -11,57 +11,145 @@
   grid-template-areas:
     ". titre ."
     "photo description description"
-    "photo . ."
-    ". price."
+    "photo description description"
+    ". price price"
     "butt butt butt";
 }
 
 .titre {
+  background-color: #b5b5b5;
+  border: solid 2px;
+  border-radius: 10px;
+  border:solid 2 px;
+  border-radius: 10px;
   grid-area: titre;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 40px ;
 }
 
 .photo {
-  grid-area: photo;
+grid-area: photo;
 
 }
 
 img {
-
-  max-height: 500px;
-  max-width: 500px;
-
+ 
+  max-height: 100%;
+  max-width: 100%;
   column-width: 10em;
 
 }
 
 .description {
+  background-color: #b5b5b5;
+    border: solid 2px;
+    border-radius: 10px;
+   max-height: 100%;
+   max-width: 100%;
   grid-area: description;
   font-size: 24px;
 }
 
 .price {
+  border: solid 2px;
+  border-radius: 20px;
+  background-color:#b5b5b5;
   grid-area: price;
   font-size: 40px;
 
 }
 
+.price p{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .butt {
- 
+
   display: flex;
   justify-content: center;
   grid-area: butt;
-  font-size: 20px;
+  font-size: 14px;
   height: 20%;
   width: 100%;
   
 
 }
 
-button{
-  background-color: green;
-  color: black;
+button {
+  background-color: rgb(217, 21, 21);
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,800);
+
+
+
+button:hover {
+  cursor: pointer
+}
+
+button {
+  background: forestgreen;
+  outline: none;
+  position: relative;
+  border: 2px solid rgb(44, 165, 3);
+  padding: 15px 50px;
+  overflow: hidden;
+}
+
+/*button:before (attr data-hover)*/
+button:hover:before {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+button:before {
+  content: attr(data-hover);
+  position: absolute;
+  top: 1.1em;
+  left: 0;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: .8em;
+  opacity: 0;
+  transform: translate(-100%, 0);
+  transition: all .3s ease-in-out;
+}
+
+/*button div (button text before hover)*/
+button:hover div {
+  opacity: 0;
+  transform: translate(100%, 0)
+}
+
+button div {
+  display: flex;
+  
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: .8em;
+  transition: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.data-hover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

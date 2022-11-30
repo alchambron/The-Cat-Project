@@ -1,18 +1,22 @@
+
 <div class="contain">
     <div class="titre">
-      <div class=title>@items a prevoir</div>
+      <div class="title"><=@item.title></></div>
     </div>
 
         <div class="photo">
-          <img src ="https://www.mariefrance.fr/wp-content/uploads/sites/5/2022/10/a-3-750x394.jpg">
+          <img src ="https://www.mariefrance.fr/wp-content/uploads/sites/5/2022/10/a-3-750x394.jpg" class = "responsive">
         </div>
 
           <div class="description">Description : @items::fakker bien entendu il y aura ici des text qui iron avec la photo
           </div>
 
             <div class="price">
-              <p>PRICE: </p></div>
+              <p><=@items.price></p></div>
 
-        <div class="butt">
-  <button>Add to card</button>
+        <div class="butt ">
+        <button  data-hover="click me!"><div>Add to card</div></button>
 </div>
+
+
+
