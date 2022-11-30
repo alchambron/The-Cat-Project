@@ -3,8 +3,8 @@
 
 /* --------------show css-------------- */
 .contain {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 100%;
+  max-height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -13,18 +13,20 @@
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    ". titre ."
+    "titre description description"
     "photo description description"
-    "photo description description"
-    ". price price"
+    "photo price price"
     "butt butt butt";
 }
 
 .titre {
-  background-color: #b5b5b5;
-  border: solid 2px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+font-style: italic;
+  border: solid 1px;
   border-radius: 10px;
-  border:solid 2 px;
   border-radius: 10px;
   grid-area: titre;
   display: flex;
@@ -39,17 +41,21 @@ grid-area: photo;
 
 }
 
-.photo img {
- 
-  max-height: 100%;
-  max-width: 100%;
-  column-width: 10em;
+.photopos{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
 .description {
-  background-color: #b5b5b5;
-    border: solid 2px;
+  margin-right: 10px;
+  margin-top: 5px;
+ margin-left: 5px;
+ padding: 10%;
+    border: solid 1px;
     border-radius: 10px;
    max-height: 100%;
    max-width: 100%;
@@ -59,21 +65,30 @@ grid-area: photo;
 
 .position_description{
   margin: 10px;
+  text-decoration: underline;
+}
+
+.posdescri{
+  display: flex;
+  margin: 10%;
+}
+
+.totalprice{
+ 
+  display: flex;
+  flex-direction: column;
 }
 .price {
-  border: solid 2px;
-  border-radius: 20px;
-  background-color:#b5b5b5;
+  display: flex;
+  justify-content: center;
+  
+  width: 100%;
+
   grid-area: price;
   font-size: 40px;
 
 }
 
-.price p{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .butt {
 

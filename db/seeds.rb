@@ -15,6 +15,6 @@ Item.delete_all
         title: Faker::GreekPhilosophers.name,
         description: Faker::Lorem.paragraph(sentence_count: 2),
         price: Faker::Commerce.price(range: 2.00..500.00, as_string: true),
-        image_url: Faker::LoremFlickr.image,
+        image_url: Faker::LoremFlickr.image(size: "600x600"),
     )
 end
