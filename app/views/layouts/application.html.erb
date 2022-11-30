@@ -7,15 +7,15 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "/assets/application.js", "data-turbo-track": "reload", defer: true %>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/08d256aef3.js" crossorigin="anonymous"></script>
   
   </head>
 
-  <body>
-
+  <header>
       <%= render'layouts/navbar' %>
-      
+  </header>
+
+  <body>
     <%= yield %>
   </body>
  
