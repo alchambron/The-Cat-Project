@@ -27,6 +27,10 @@
   /* border-right: solid 0.5px grey; */
 }
 
+.left-footer {
+  cursor: pointer;
+}
+
 .left-footer h3 {
   margin: 2%;
 }
