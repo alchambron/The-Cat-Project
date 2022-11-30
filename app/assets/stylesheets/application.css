@@ -3,14 +3,20 @@
 /*
 *= require navbar
 *= require show
+*= require list_items
+
 *= require footer
 */
 
 /* -------------- General ----------------- */
 
 body {
+
+  
   margin: 0;
   padding: 0;
+ 
 }
+
 
 /*--------------------
