@@ -8,15 +8,16 @@
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "/assets/application.js", "data-turbo-track": "reload", defer: true %>
     <script src="https://kit.fontawesome.com/08d256aef3.js" crossorigin="anonymous"></script>
-  
   </head>
-
-  <header>
-      <%= render'layouts/navbar' %>
-  </header>
-
   <body>
-    <%= yield %>
+    <header>
+      <%= render'layouts/navbar' %>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <%= render 'layouts/footer'%>
+    </footer>
   </body>
- 
 </html>
