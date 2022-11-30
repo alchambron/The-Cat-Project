@@ -10,8 +10,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
 
-
-  
   scope '/checkout' do
     post 'create', to: 'checkout#create', as: 'checkout_create'
     get 'cancel', to: 'checkout#cancel', as: 'checkout_cancel'
