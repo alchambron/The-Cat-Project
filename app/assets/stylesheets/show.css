@@ -1,6 +1,10 @@
 /* ----------------show css ---------------- */
 
+
+/* --------------show css-------------- */
 .contain {
+  max-width: 100%;
+  max-height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -9,14 +13,21 @@
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    ". titre ."
+    "titre description description"
     "photo description description"
-    "photo . ."
-    ". price."
+    "photo price price"
     "butt butt butt";
 }
 
 .titre {
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+font-style: italic;
+  border: solid 1px;
+  border-radius: 10px;
+  border-radius: 10px;
   grid-area: titre;
   display: flex;
   justify-content: center;
@@ -26,6 +37,142 @@
 }
 
 .photo {
-  grid-area: photo;
+grid-area: photo;
 
+}
+
+.photopos{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.description {
+  margin-right: 15px;
+  margin-top: 5px;
+ margin-left: 5px;
+ padding: 10%;
+    border: solid 1px;
+    border-radius: 10px;
+   max-height: 100%;
+   max-width: 100%;
+  grid-area: description;
+  font-size: 24px;
+}
+
+.position_description{
+  margin: 10px;
+  text-decoration: underline;
+}
+
+.posdescri{
+  display: flex;
+  margin: 10%;
+}
+
+.totalprice{
+ 
+  display: flex;
+  flex-direction: column;
+}
+.price {
+  display: flex;
+  justify-content: center;
+  
+  width: 100%;
+
+  grid-area: price;
+  font-size: 40px;
+
+}
+
+
+.butt {
+
+  display: flex;
+  justify-content: center;
+  grid-area: butt;
+  font-size: 14px;
+  height: 20%;
+  width: 100%;
+  
+
+}
+
+.butt button {
+  background-color: rgb(217, 21, 21);
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,800);
+
+
+
+.butt button:hover {
+  cursor: pointer
+}
+
+.butt button {
+  background: forestgreen;
+  outline: none;
+  position: relative;
+  border: 2px solid rgb(44, 165, 3);
+  padding: 15px 50px;
+  overflow: hidden;
+}
+
+/*button:before (attr data-hover)*/
+.butt button:hover:before {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.butt button:before {
+  content: attr(data-hover);
+  position: absolute;
+  top: 1.1em;
+  left: 0;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: .8em;
+  opacity: 0;
+  transform: translate(-100%, 0);
+  transition: all .3s ease-in-out;
+}
+
+/*button div (button text before hover)*/
+.butt button:hover div {
+  opacity: 0;
+  transform: translate(100%, 0)
+}
+
+.butt button div {
+  display: flex;
+  
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: .8em;
+  transition: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.data-hover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
