@@ -17,19 +17,19 @@
 <div class="card-container">
   <% @items.each do |item| %>
 
-    <div class="card">
-    <div class="card-header">
-      <img id="card-picture" src="<%=item.image_url %>" alt="rover" />
-    </div>
-    <div class="card-body">
-      <h4>
-      <%= item.title%>
-      </h4>
-      <div class="user">
-        <%=link_to "see more", item_path(item.id), class:"card-button"%>
-      </div>
-   </div>
-</div>
-
-  <%end%>
+      <div class="card">
+           <div class="card-header">
+                <img id="card-picture" src="<%=item.image_url %>" alt="rover" />
+           </div>
+         <div class="card-body">
+            <h4>
+            <%= item.title%>
+            </h4>
+          <div class="user">
+              <%=link_to "see more", item_path(item.id), class:"card-button"%>
+          </div>
+          </div>
+     </div>
+   
+   <%end%>
 </div>
