@@ -1,20 +1,25 @@
 <div class="container-navbar">
-
   <div class="nav-left">
-    <h1>Logo</h1>
+    <h1><%= link_to "The Cat Project", root_path, class: "link hvr-grow" %></h1>
   </div>
-
   <div class="nav-right">
     <div class="dropdown">
       <i id="burger-menu" onclick="myFunction()" class="hvr-grow fa-solid fa-bars fa-2x"></i>
       <div id="myDrop" class="dropdown-content">
-        <a href="/users/sign_in">Login</a>
-        <a href="/users/sign_up">Sign-up</a>
-        <a href=" /items/:id">Profile</a>
-        <a href="/users/sign_out">Disconnect</a>
+        <% if user_signed_in? %>
+          <%= link_to "Mon Compte",users_show_path(current_user.id)%>
+          <%= link_to "Sign Out", destroy_user_session_path%>
+        <% else %>
+          <%= link_to "Login", new_user_session_path %>
+          <%= link_to "Sign-up", new_user_registration_path %>
+        <% end %>
       </div>
-      <a href="/cart/list_items">🛒</a>
+    </div>
+    <div class="icon-cart">
+      <%= link_to cart_list_items_path do %>
+        <i class="fa-solid fa-cart-shopping fa-2x hvr-grow"></i>
+      <% end %>
     </div>
   </div>
-
+</div>
 </div>
