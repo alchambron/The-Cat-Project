@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'items#index'
+  get 'users/show', to: 'users#show'
   get 'cart/list_items'
   get 'cart/add_item'
   get 'cart/delete_item'
