@@ -1,24 +1,9 @@
-<%=render 'show'%>
-
-
-
-
-
-
-
-<%= render @item %>
-
-<%# < style="color: green"><%= notice %>
-<%# 
-<h1>Items</h1>
-
-<div id="items">
-  <% @items.each do |item| %>
-    <%# <%= render item %> 
-    <%# <p> %>
-      <%# <%= link_to "Show this item", item %>
-    <%# </p> %>
-  <%# <% end %>
-<%# </div> %>
-
-<%# <%= link_to "New item", new_item_path %>
+<div class="container-index">
+<% @item.each do |value|%>
+ <div class="photo">
+     <p><%= value.title %></p>
+     <p><<%= value.id %></p>
+     <button class="btn"> Show more</button>
+ </div>
+</div>
+<% end %>
