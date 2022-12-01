@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'items#index'
   scope '/cart' do
-    get 'list_items', to: 'cart#list_items', as: 'cart_list_items'
+    get 'users/show', to: 'users#show'
+  get 'list_items', to: 'cart#list_items', as: 'cart_list_items'
     post 'add_item/:id', to: 'cart#add_item', as: 'cart_add_item'
     delete 'delete_item/:id', to: 'cart#delete_item', as: 'cart_delete_item'
   end
