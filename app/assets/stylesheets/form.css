@@ -1,0 +1,120 @@
+.all-form {
+  display: flex;
+  flex: auto;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+.container-form{  
+  display: grid;
+  flex-direction: column;
+  width: 25%;
+  justify-content: center;
+
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Title Title Title"
+    "Form Form Form"
+    "Form Form Form"
+    ". Validate ."
+    "Other Other Other";
+  height: 70%;
+  border: solid 1px;
+  border-radius: 20px;
+}
+ 
+.Title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: Title;
+  text-align: center;
+}
+
+.remember {
+  flex-direction: row;
+  justify-content: start;
+}
+
+.Form {
+  grid-area: Form;
+  display: flex;
+  justify-content: center;
+}
+
+.Form form {
+  justify-self: center;
+  text-align: center;
+  width: 100%;
+}
+
+.input-field {
+  margin: 10px 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius: 5px;
+  width: 70%;
+  height: 150%;
+  text-align: center;
+  align-items: center;
+}
+
+.input-text {
+  margin-bottom: -10%;
+}
+
+.Validate {
+  grid-area: Validate;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redirect-links {
+  grid-area: Other;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.btn-secondary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 26px;
+  border: 2px solid rgb(0, 0, 0);
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 8px;
+  border-radius: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+}
+
+
+.btn-primary {
+  width: 130px;
+  height: 40px;
+  border: 2px solid #000;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 10px;
+}

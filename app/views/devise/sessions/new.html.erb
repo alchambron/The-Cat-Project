@@ -1,2 +1,39 @@
-<%= render "login" %>
-   
+<div class="all-form">
+  <div class="container-form">
+    <div class="Title">
+      <h2>Log in</h2>
+    </div>
+    <div class="Form">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.label :email, class: "input-text" %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input-field"%>
+        </div>
+        <br>
+        <div class="field">
+          <%= f.label :password, class: "input-text" %><br />
+          <%= f.password_field :password, autocomplete: "current-password", class: "input-field"%>
+        </div>
+        <% if devise_mapping.rememberable? %>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end %>
+      </div>
+      <div class="Validate">
+        <div class="actions">
+          <%= f.submit "Log in", class: "btn-primary hvr-grow" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="redirect-links">
+      <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+        <%= link_to "Sign up", new_registration_path(resource_name), class: "btn-secondary hvr-grow"%><br />
+      <% end %>
+      <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+        <%= link_to "Forgot your password?", new_password_path(resource_name), class: "btn-secondary hvr-grow" %><br />
+      <% end %>
+    </div>
+  </div>
+</div>
