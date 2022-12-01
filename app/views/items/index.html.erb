@@ -12,48 +12,24 @@
 <h1> Phrase en italique gris clair </h1>
 
   
+
  
-<div class="card-index">
+<div class="card-container">
   <% @items.each do |item| %>
 
-
-
-      <div class="card-container">
-        <div class="picture">
-          <img id="card-picture" src="<%= item.image_url%>">
-        </div>
-        <div class="card-description">
-        <p><%= item.description %></p>
-        </div>
-        <div class="action_button">
-        <%= link_to "See more", item_path(item.id)%>
-        </div>
+    <div class="card">
+    <div class="card-header">
+      <img id="card-picture" src="<%=item.image_url %>" alt="rover" />
+    </div>
+    <div class="card-body">
+      <h4>
+      <%= item.title%>
+      </h4>
+      <div class="user">
+        <%=link_to "see more", item_path(item.id), class:"card-button"%>
       </div>
+   </div>
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <%# <div class="container2-index">
-      <div class="card-index animate">
-        <div class="photo-index">
-        </div>
-        <div class="description-index">
-              <h2>Description:</h2>
-            
-            
-              <div href="#" class="btn-cta">Call to action</div>
-        </div>
-      </div>
-    </div> %>
   <%end%>
 </div>

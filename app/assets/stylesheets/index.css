@@ -1,6 +1,61 @@
-.container-index {
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   height: 100%;
+  justify-content: space-evenly;
+  
 }
+
+.card {
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 300px;
+}
+.card-header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 100px;
+}
+
+.card-body p {
+  font-size: 13px;
+  margin: 0 0 40px;
+}
+
+.card-button{
+  width: 150px;
+  height: 30px;
+  padding: 12px 18px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.card-button:active{
+  text-decoration: none;
+  color: black;
+}
+.card-button:visited{
+  text-decoration: none;
+  color: black;
+}
+
+
+
 
 
 .header-index {  
@@ -13,15 +68,13 @@
     ". . ."
     ". . sentence"
     ". . cta-button";
-  background-image: url(/assets/cat.jpeg);
+  background-image: url(cat.jpeg);
   background-size: cover;
   resize: both;
   background-repeat: no-repeat;
   background-position: center;
   height: 60%;
 }
-
-
 
 .sentence { 
   grid-area: sentence; 
@@ -35,121 +88,3 @@
   display: flex;
   grid-area: cta-button; 
 }
-/* NEW */
-
-.card-container {  
-  border: 1px solid black;
-  width:250px;
-  height: 300px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "picture picture picture"
-    "picture picture picture"
-    "card-description card-description card-description"
-    "action_button action_button action_button";
-}
-
-.picture { 
-  grid-area: picture;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-#card-picture{
-  width:auto;
-  max-width: 100%;
-  height: 100%;
-  max-height: 200px;
-  overflow: hidden;
-}
-
-.card-description { 
-  grid-area: description; 
-}
-
-.action_button { 
-  grid-area: action_button; 
-}
-
-
-
-
-
-
-
-
-
-
-
-.container2-index {  
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "card-index "
-
-}
-
-.card-index {  
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "photo-index photo-index photo-index"
-    "photo-index photo-index photo-index"
-    "description-index description-index description-index";
-  grid-area: card-index; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  height: 100%;
-  width: 100%;
-  
-}
-
-.photo-index{ 
-  grid-area: photo-index; 
-  background: url(cat_card_index.jpeg);
-  background-size: contain;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-  width: 312px;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: solid 1px rgba(118, 116, 116, 0.427);
-  
-  
-}
-
-.description-index { 
-  grid-area: description-index;
-  background: rgb(238,174,202);
-  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: solid 1px rgba(118, 116, 116, 0.427);
-
-  
-}
-
