@@ -1,27 +1,59 @@
 <div class="container-index">
-
   <div class="header-index">
     <div class="sentence">
       <h1>Venez agrandir votre collection de photos de chat !</h1>
     </div>
-
     <div class="cta-button">
       <button class="btn-primary hvr-grow">Venez</button>
     </div>
-
-
-
-
   </div>
+</div>
+
+<h1> Phrase en italique gris clair </h1>
+
+  
+ 
+<div class="card-index">
+  <% @items.each do |item| %>
 
 
-  <div class="card-index">
+
+      <div class="card-container">
+        <div class="picture">
+          <img id="card-picture" src="<%= item.image_url%>">
+        </div>
+        <div class="card-description">
+        <p><%= item.description %></p>
+        </div>
+        <div class="action_button">
+        <%= link_to "See more", item_path(item.id)%>
+        </div>
+      </div>
 
 
 
 
 
-  </div>
 
 
+
+
+
+
+
+
+
+    <%# <div class="container2-index">
+      <div class="card-index animate">
+        <div class="photo-index">
+        </div>
+        <div class="description-index">
+              <h2>Description:</h2>
+            
+            
+              <div href="#" class="btn-cta">Call to action</div>
+        </div>
+      </div>
+    </div> %>
+  <%end%>
 </div>
