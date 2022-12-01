@@ -1,4 +1,4 @@
-
+/* 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -12,27 +12,29 @@
     "info-panier info-panier info-panier recap recap"
     ". . . valider valider";
 }
-
+ */
 
 .mon-panier {
-   grid-area: mon-panier;
+  grid-area: mon-panier;
   max-width: 100%;
   display: flex;
   justify-content: flex-end;
-  align-items:flex-end;
- 
+  align-items: flex-end;
+
   display: flex;
   justify-content: center;
   align-items: center;
- 
+
 }
-.mon-panier h1{
+
+.mon-panier h1 {
   background-color: #B8AC98;
-  border:solid 2px;
+  border: solid 2px;
   border-radius: 10px;
   border: 4px double #cccccc;
 }
-.itemchoisi{
+
+.itemchoisi {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -42,16 +44,17 @@
   grid-area: info-panier;
   background-color: #B8AC98;
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
   font-size: 14px;
-  border:solid 2px;
+  border: solid 2px;
   border-radius: 10px;
   border-width: 2px;
   border: 4px double #cccccc;
 
 }
-.info img{
+
+.info img {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -59,90 +62,89 @@
   max-width: 200px;
 }
 
-.recap{
+.recap {
   grid-area: recap;
   background-color: #B8AC98;
   border: solid 2px;
-   border-radius: 10px;
-    border: 4px double #cccccc;
+  border-radius: 10px;
+  border: 4px double #cccccc;
 }
 
-.recapitu{
+.recapitu {
   grid-area: recapitu;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
- 
+
 
 }
 
-.recapitu h2{
+.recapitu h2 {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  
+
 }
 
 .valider {
   grid-area: valider;
   justify-content: center;
-    align-items: center;
-    margin-top: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-
-    
-}
-
-.valider button{
+  align-items: center;
+  margin-top: 5px;
   display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: #000000 2px 2px 6px;
-   
-        display: inline-block;
-        background-color: rgb(28, 202, 28);
-        border-radius: 50px;
-        border: 4px double #cccccc;
-        color: #000000;
-  
-       
-        text-align: center;
-        font-size: 20px;
-        padding: 10px;
-        width: 200px;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin: 5px;
-}
-      button span {
-          cursor: pointer;
-          display: inline-block;
-          position: relative;
-          transition: 0.5s;
-        }
-      
-        button span:after {
-          content: "\00bb";
-          position: absolute;
-          opacity: 0;
-          top: 0;
-          right: -20px;
-          transition: 0.5s;
-        }
-      
-        button:hover {
-          background-color: #f1f508;
-        }
-      
-        button:hover span {
-          padding-right: 25px;
-        }
-      
-        button:hover span:after {
-          opacity: 1;
-          right: 0;
-        }
-      
+  justify-content: center;
+  align-items: baseline;
 
+
+}
+
+.valider button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: #000000 2px 2px 6px;
+
+  display: inline-block;
+  background-color: rgb(28, 202, 28);
+  border-radius: 50px;
+  border: 4px double #cccccc;
+  color: #000000;
+
+
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: #f1f508;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

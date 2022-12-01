@@ -17,10 +17,13 @@
       <div class="posprice">
         <p>Price :<%=@item.price%></p>
       </div>
-      <div class="butt ">
+<%= button_to 'Ajouter au panier' , cart_add_item_path(@item.id), method: "post" %>
+
+      <%# <div class="butt ">
         <button  data-hover="click me!">
+        
           <div>Add to card</div>
         </button>
-      </div>
+      </div> %>
     </div>
   </div>
