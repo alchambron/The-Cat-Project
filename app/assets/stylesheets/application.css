@@ -3,6 +3,7 @@
 /*
 *= require navbar
 *= require show
+*= require index
 *= require list_items
 *= require footer
 *= require form
@@ -19,6 +20,8 @@ body {
  
 }
 
+
+/*--------------------
 html, body{
   height: 100%;
 }
