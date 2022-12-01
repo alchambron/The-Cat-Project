@@ -1,0 +1,26 @@
+<div class="contain">
+  <div class="titre">
+    <div class=title><%=@items.title%></div>
+  </div>
+  <div class="photo">
+    <div class="photopos">
+      <img src ="<%=@items.image_url%>" class = "responsive">
+    </div>
+  </div>
+  <div class="description">
+    <div class ="position_description">Description :
+    </div>
+    <div class = "posdescri"><%=@items.description%></div>
+  </div>
+  <div class="price">
+    <div class="totalprice">
+      <div class="posprice">
+        <p>Price :<%=@items.price%></p>
+      </div>
+      <div class="butt ">
+        <button  data-hover="click me!">
+          <div>Add to card</div>
+        </button>
+      </div>
+    </div>
+  </div>
