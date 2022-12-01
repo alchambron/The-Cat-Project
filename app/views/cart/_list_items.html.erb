@@ -1,0 +1,46 @@
+<div class="container">
+
+  <div class="mon-panier">
+    <h1>Mon panier</h1>
+  </div>
+
+
+  <% @items.each do |item| %>
+    <div class="info-panier">
+      <div class="info">
+        <img src="<%= item.image_url %>?<%= item.id %>">
+      </div>
+      <div class="itemchoisi">
+        <p>
+          <%= item.title %><br />
+            <%= item.price %>
+        </p>
+        <p><%= button_to 'Supprimer du panier' , cart_delete_item_path(item.id), method: "delete" %></p>
+      </div>
+
+    </div>
+    <%end %>
+
+      <div class="recap">
+        <div class="recapitu">
+          <h2>récapitulatif panier</h2>
+        </div>
+        <hr>
+        <div class="nombrearticle">
+          <div class="na">
+            <p>nombre article : </p>
+          </div>
+          <hr>
+          <div class="montanttotal">
+            <div class="total">
+              <h4>Montant total : prix</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="valider">
+        <button>valider mon panier</button>
+      </div>
+</div>
