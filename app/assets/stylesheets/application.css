@@ -8,6 +8,7 @@
 *= require footer
 *= require form
 *= require index
+*= require sign_up
 */
 
 /* -------------- General ----------------- */

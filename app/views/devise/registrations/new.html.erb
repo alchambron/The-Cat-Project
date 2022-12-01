@@ -1,71 +1,40 @@
-<div class="jumbotron">
- 
-  <p>Miaou miaou miaou miaou mmm encore miaou, miaou miaou miaou mmm encore miaou,
-  miaou miaou miaou mmm encore miaou,miaou miaou miaou mmm encore miaou, <br><br><br><br><br><br><br><br></p>
+<div class="all-form">
+  <div class="container-form">
+    <div class="Title">
+      <h2>Sign up</h2>
+    </div>
+    <div class="Form">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.label :first_name, class:"input-text" %><br />
+          <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", class: "input-field" %>
+        </div>
+        <br />
+        <div class="field">
+          <%= f.label :last_name , class:"input-text"%><br />
+          <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", class: "input-field" %>
+        </div>
+        <div class="fifi">
+          <%= f.label :birth_date, class:"input-text" %><br />
+          <%= f.text_field :birth_date, :value => (f.object.birth_date.strftime('%m/%d/%Y') if f.object.birth_date), class:"input-field" %>
+        </div>
+        <div class="field">
+          <%= f.label :email, class:"input-text" %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input-field" %>
+        </div>
+        <div class="fieldinput">
+          <%= f.label :password, class:"input-text" %><br />
+          <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "new-password", class:"input-field"  %>
+        </div>
+      </div>
+      <div class="Validate">
+        <div class="actions">
+          <%= f.submit "Sign up", class: "btn-primary hvr-grow" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
-
-
-
-<div class="formulaire">
-<h1>Sign up</h1>
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-<div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, autofocus: true, autocomplete: "Jean" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autofocus: true, autocomplete: "Dupont" %>
-  </div>
-
-    <div class="field">
-    <%= f.label :birth_date %><br />
-    <%= f.text_field :birth_date, :value => (f.object.birth_date.strftime('%m/%d/%Y') if f.object.birth_date), :size => "20" %> 
-     </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
-
-<form class="form-signup">
-      <img class="mb-4" >
-      <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
-      <label for="inputFirstname" class="sr-only">First name</label>
-      <input type="first_name" id="first_name" class="form-control" placeholder="First name" required autofocus>
-      <label for="inputLastname" class="sr-only">Last name</label>
-      <input type="last_name" id="inputLastname" class="form-control" placeholder="Last name" required autofocus>
-      <label for="inputEmail" class="sr-only">Email adress</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      <label for="inputPassword" class="sr-only">Confirm password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="One more time please" required>
-      
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2022-2023</p>
-    </form>
