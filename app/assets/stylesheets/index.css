@@ -1,0 +1,38 @@
+.container-index {
+  height: 100%;
+}
+
+
+.header-index {  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". . sentence"
+    ". . cta-button";
+  background-image: url(/assets/cat.jpeg);
+  background-size: cover;
+  resize: both;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60%;
+}
+
+
+
+.sentence { 
+  grid-area: sentence; 
+  color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  margin-right: 10%;
+}
+
+.cta-button { 
+  display: flex;
+  grid-area: cta-button; 
+}
+
