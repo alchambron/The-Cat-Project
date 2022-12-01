@@ -13,7 +13,7 @@
     ". . ."
     ". . sentence"
     ". . cta-button";
-  background-image: url(/assets/cat.jpeg);
+  background-image: url(cat.jpeg);
   background-size: cover;
   resize: both;
   background-repeat: no-repeat;
