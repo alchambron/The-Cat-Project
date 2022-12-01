@@ -1,4 +1,4 @@
-# fly.toml file generated for thecatproject on 2022-12-01T00:34:37+01:00
+# fly.toml file generated for thecatproject on 2022-12-01T01:44:50+01:00
 
 app = "thecatproject"
 kill_signal = "SIGINT"
@@ -49,3 +49,7 @@ processes = []
 [[statics]]
   guest_path = "/app/public"
   url_prefix = "/"
+
+[mounts]
+  source="the_cat_project_volume"
+  destination="/data"
