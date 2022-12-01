@@ -55,11 +55,11 @@
 }
 
 .input-field {
-  margin: 10px 0;
+  margin: 10px 20px;
   padding-top: 3px;
   padding-bottom: 3px;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-  border-radius: 5px;
+  border-radius: 10px;
   width: 70%;
   height: 150%;
   text-align: center;
@@ -67,7 +67,7 @@
 }
 
 .input-text {
-  margin-bottom: -10%;
+  margin-bottom: 60%;
 }
 
 .Validate {
