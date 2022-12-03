@@ -4,12 +4,18 @@ class CartController < ApplicationController
   end
 
   def add_item
-    get_cart.add_item(params[:id])
+    @cart.add_item(params[:id])
+    save_to_session
   end
 
   def delete_item
-    get_cart.delete_item(params[:id])
+    @cart.delete_item(params[:id])
+    save_to_session
     # Une fois que l'item a été retiré du panier, on recharge la page appelante pour que les items soient à jour
     redirect_back(fallback_location: root_path)
+  end
+
+  def save_to_session
+    session[:cart] = @cart
   end
 end
