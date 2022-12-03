@@ -17,7 +17,7 @@
     </div>
     <div class="icon-cart">
       <%= link_to cart_list_items_path do %>
-        <i class="fa-solid fa-cart-shopping fa-2x hvr-grow"></i>
+        <i class="fa-solid fa-cart-shopping fa-2x hvr-grow"></i> (<%= @cart.items_count %>)
       <% end %>
     </div>
   </div>
