@@ -28,12 +28,15 @@
         <hr>
         <div class="nombrearticle">
           <div class="na">
-            <p>nombre article : </p>
+            <p>Nombre articles : 
+                <%= @cart.items_count %></p>
           </div>
           <hr>
           <div class="montanttotal">
             <div class="total">
-              <h4>Montant total : prix</h4>
+              <h4>Montant total : 
+                <%= @cart.total_price %>€
+              </h4>
             </div>
           </div>
         </div>
@@ -41,6 +44,8 @@
 
 
       <div class="valider">
-        <button>valider mon panier</button>
+         <% if @cart.items_count > 0 %>
+          <%= button_to"Passer commande", checkout_create_path, remote: true %>
+          <% end %>
       </div>
 </div>

@@ -39,4 +39,8 @@ class Cart
   def items_count
     return items.length
   end
+
+  def make_empty
+    @items_ids = []
+  end
 end

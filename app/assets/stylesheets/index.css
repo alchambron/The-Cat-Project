@@ -9,6 +9,24 @@ body>main {
   overflow-y: auto;
 }
 
+.flash-message {
+  position: absolute;
+  border: 1px solid black;
+  padding: 1em;
+  border-radius: 1em;
+  background: lightblue;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flash-message.notice {
+  background: lightgreen;
+}
+
+.flash-message.alert {
+  background: coral;
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
