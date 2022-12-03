@@ -44,7 +44,7 @@ class CheckoutController < ApplicationController
     @cart.make_empty
     session[:cart] = @cart
     # On redirige vers la page Mes commandes ( mais il n'y en a pas alors on redirige vers l'accueil)
-    redirect_to(items_path, notice: 'Votre commande est validée et sera traitée dans les plus brefs délais.')
+    redirect_to(order_path(order.id), notice: 'Votre commande est validée et sera traitée dans les plus brefs délais.')
   end
 
   def cancel

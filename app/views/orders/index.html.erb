@@ -1,17 +1,8 @@
-<p style="color: green"><%= notice %></p>
-<b> 
-    
-
-  
-
-
-</b
 <h1>Orders</h1>
 
 <div id="orders">
   <% @orders.each do |order| %>
-    <%= render items %>
-    <p>
+    <p>Commande du <%= order.created_at.strftime('%d %B %Y à %Hh%M') %> pour un total de <%= order.total_price %>€
       <%= link_to "Show this order", order %>
     </p>
   <% end %>
