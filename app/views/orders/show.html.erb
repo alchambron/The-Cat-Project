@@ -2,9 +2,45 @@
 
 <%= render @order %>
 
-<div>
-  <%= link_to "Edit this order", edit_order_path(@order) %> |
-  <%= link_to "Back to orders", orders_path %>
+<h1>Commande passée le <%= @order.created_at.strftime('%d %B %Y à %Hh%M') %></h1>
 
-  <%= button_to "Destroy this order", @order, method: :delete %>
+
+  <% @order.items.each do |item| %>
+    <div class="info-panier">
+      <div class="info">
+        <img src="<%= item.image_url %>?<%= item.id %>">
+      </div>
+      <div class="itemchoisi">
+        <p>
+          <%= item.title %><br />
+            <%= item.price %>
+        </p>
+      </div>
+
+    </div>
+    <%end %>
+
+      <div class="recap">
+        <div class="recapitu">
+          <h2>récapitulatif commande</h2>
+        </div>
+        <hr>
+        <div class="nombrearticle">
+          <div class="na">
+            <p>Nombre articles : 
+                <%= @order.items_count %></p>
+          </div>
+          <hr>
+          <div class="montanttotal">
+            <div class="total">
+              <h4>Montant total : 
+                <%= @order.total_price %>€
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div>
+  <%= link_to "Back to orders", orders_path %>
 </div>

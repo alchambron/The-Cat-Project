@@ -15,6 +15,11 @@
       <%= render'layouts/navbar' %>
     </header>
     <main>
+    <% flash.each do |type, msg| %>
+      <div class="flash-message <%= type %>">
+        <%= msg %>
+      </div>
+    <% end %>
       <%= yield %>
     </main>
     <footer>

@@ -1,11 +1,40 @@
-.card-container{
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+}
+
+body>main {
+  overflow-y: auto;
+}
+
+.flash-message {
+  position: absolute;
+  border: 1px solid black;
+  padding: 1em;
+  border-radius: 1em;
+  background: lightblue;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flash-message.notice {
+  background: lightgreen;
+}
+
+.flash-message.alert {
+  background: coral;
+}
+
+.card-container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
   justify-content: space-evenly;
   margin-bottom: 80px;
-  
+
 }
 
 .card {
@@ -16,6 +45,7 @@
   overflow: hidden;
   width: 300px;
 }
+
 .card-header img {
   width: 100%;
   height: 200px;
@@ -36,7 +66,7 @@
   margin: 0 0 40px;
 }
 
-.card-button{
+.card-button {
   width: 150px;
   height: 30px;
   padding: 12px 18px;
@@ -46,17 +76,18 @@
   text-decoration: none;
 }
 
-.card-button:active{
-  text-decoration: none;
-  color: black;
-}
-.card-button:visited{
+.card-button:active {
   text-decoration: none;
   color: black;
 }
 
-.card-button:hover{
-  width:180px;
+.card-button:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.card-button:hover {
+  width: 180px;
   height: 40px;
   padding: 15px 22px;
   border: 2px solid black;
@@ -71,7 +102,7 @@
 
 
 
-.header-index {  
+.header-index {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -89,15 +120,15 @@
   height: 60%;
 }
 
-.sentence { 
-  grid-area: sentence; 
+.sentence {
+  grid-area: sentence;
   color: antiquewhite;
   display: flex;
   justify-content: center;
   margin-right: 10%;
 }
 
-.cta-button { 
+.cta-button {
   display: flex;
-  grid-area: cta-button; 
+  grid-area: cta-button;
 }

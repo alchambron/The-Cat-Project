@@ -8,7 +8,6 @@
   align-items: end;
   grid-template-areas: "left . right";
   height: 10%;
-  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: rgb(233, 233, 233);
@@ -54,6 +53,7 @@
 .right-footer a:link {
   color: black;
 }
+
 .right-footer a:visited {
   color: rgba(40, 33, 83, 0.567);
 }
